@@ -40,7 +40,8 @@
 						document.write(firstName + ' ' + lastName);
 					</script></li>
 					<li><script>
-						var name = prompt("What is your name?", "");
+						//var name = prompt("What is your name?", "");  NOTE:  prompt deactivated for optimal UI
+						var name = "Buba"
 						document.write("Howdy " + name + "!");
 					</script></li>
 					<li><script>
@@ -62,6 +63,63 @@
 						document.write(authors[0] + "!</strong");
 						</script></li>
 				</ol>
+			</article>
+			<article>
+				<h2>Week 3 Tutorials</h2>
+				<ol>
+					<li>
+						<script>
+						var luckyNumber = prompt("What's your lucky number?", "");
+							luckyNumber = parseInt(luckyNumber);
+							while (isNaN(luckyNumber)) {
+							luckyNumber = prompt("Please give me a number in digit form.", "");
+						}
+						</script>
+						
+						<script>
+						if (luckyNumber==7 || luckyNumber==21) {
+							document.write("<p>Hey! " + luckyNumber + " is my lucky number too!</p>");
+						}
+						else if (luckyNumber==11 || luckyNumber==13) {
+							document.write("<p>Wooh!  " + luckyNumber + "? That is so unlucky!</p>");
+						}
+						else {
+							document.write("<p>Its not mine, but the number " + luckyNumber + " is lucky for you.</p>");
+						}
+						</script>
+					</li>
+					
+					<li>
+						<script>
+							var score=0;
+							var questions = [
+							['How many moons does Earth have?', 1],
+							['How many moons does Saturn have?',31],
+							['How many moons does Venus have?', 0]
+							];
+							
+							function askQuestion(question) {
+								var answer = prompt(question[0],'');
+								if (answer == question[1]) {
+									alert('CORRECT!');
+									score++;
+									} else {
+										alert('Sorry. The correct answer is ' + question[1]);
+									}
+								}
+
+								for (var i=0; i<questions.length; i++) {
+									askQuestion(questions[i]);
+								}
+							</script>
+						
+						<script>
+							var message = 'You got ' + score + ' out of ' + questions.length + ' questions correct.';
+							document.write('<p>' + message + '</p>');
+						</script>
+					</li>
+				</ol>
+			</article>
 		</header>
 		
 
